@@ -13,8 +13,17 @@ describe('City_Guide E2E Tests', function () {
   });
 
 });
-describe("test for input", function()){
-	it("to test input field and check the output", function()){
-		element(by.model("city.name")).sendKeys()
-	}
-}
+
+
+describe("test for input field on home page", function(){
+	it("should be on a correct page",function(){
+		browser.get("http://city-guide.com/jswebapp");
+		expect(browser.getCurrentUrl()).toEqual("http://city-guide.com/jswebapp");
+	});
+
+	it("testing input and output",function(){
+		browser.get("http://city-guide.com/jswebapp");
+		element(by.model("city.name")).sendKeys("Sarajevo");
+		element(by.buttonText("DETALJI")).click();
+	});
+});
