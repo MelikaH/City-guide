@@ -5,7 +5,7 @@ describe('City_Guide E2E Tests', function () {
   let expectedMsg = 'Welcome to the City-Guide!';
 
   beforeEach(function () {
-    browser.get('');
+    browser.get("http://city-guide.com/jswebapp");
   });
 
   it('should display: ' + expectedMsg, function () {
@@ -28,5 +28,4 @@ describe("test for input field on home page", function(){
 		expect(browswer.getCurrentUrl()).toContain("sarajevo");
 	});
 });
-
 
