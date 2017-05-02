@@ -2,7 +2,7 @@ import { browser, element, by } from 'protractor';
 
 describe('City_Guide E2E Tests', function () {
 
-  let expectedMsg = 'Hello Angular';
+  let expectedMsg = 'Welcome to the City-Guide!';
 
   beforeEach(function () {
     browser.get('');
@@ -25,5 +25,8 @@ describe("test for input field on home page", function(){
 		browser.get("http://city-guide.com/jswebapp");
 		element(by.model("city.name")).sendKeys("Sarajevo");
 		element(by.buttonText("DETALJI")).click();
+		expect(browswer.getCurrentUrl()).toContain("sarajevo");
 	});
 });
+
+
